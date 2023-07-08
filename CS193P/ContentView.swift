@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ScrollView {
-                LazyVGrid(columns: [GridItem(), GridItem(),GridItem()]) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
                     ForEach(emojis[0 ..< emojiCount], id:\.self) { emoji in
                         CardView(content: emoji)
                             .aspectRatio(2/3, contentMode: .fit) // this modifier lets the CardView be 2 wide and 3 high
