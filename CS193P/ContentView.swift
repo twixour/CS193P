@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var emojis = ["✈️", "🚗","🚜","🚁"]
+    var emojiCount: Int = 4
     var body: some View {
         HStack {
-            ForEach(emojis, id:\.self) { emoji in
+            ForEach(emojis[0 ..< emojiCount], id:\.self) { emoji in
                 CardView(content: emoji)
             }
             
