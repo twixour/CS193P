@@ -15,12 +15,13 @@ struct ContentView: View {
             LazyVGrid(columns: [GridItem(), GridItem(),GridItem()]) {
                 ForEach(emojis[0 ..< emojiCount], id:\.self) { emoji in
                     CardView(content: emoji)
+                        .aspectRatio(2/3, contentMode: .fit) // this modifier lets the CardView be 2 wide and 3 high
                 }
                 
             }
             
             .foregroundColor(.red)
-            Spacer()
+            Spacer()  // This spacer consumes the entire space if you remove this spacer here then all the cards will come to the center
             HStack {
                 remove
                 Spacer()
