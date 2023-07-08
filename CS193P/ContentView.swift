@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         HStack {
-//            CardView(isFaceUp: true)
-//            CardView(isFaceUp: false)
-//            CardView(isFaceUp: true)
-//            CardView(isFaceUp: false)
-            CardView()
-            CardView()
-            CardView()
-            CardView()
+            CardView(content: "✈️")
+            CardView(content: "")
+            CardView(content: "")
+            CardView(content: "")
             
         }
         .padding(.horizontal)
@@ -27,6 +24,7 @@ struct ContentView: View {
 
 
 struct CardView: View {
+    var content: String
     @State private var isFaceUp: Bool = true
     
     var body: some View {
@@ -38,7 +36,7 @@ struct CardView: View {
                     .foregroundColor(Color.white)
                 shape
                     .stroke(lineWidth: 3)
-                Text("✈️")
+                Text(content)
                     .font(.largeTitle)
             } else {
                 shape.fill()
