@@ -11,7 +11,7 @@ import SwiftUI
 
 class EmojiMemoryGame {
     private var model: MemoryGame<String> =
-    MemoryGame<String>(numberOfPairsOfCards: 4, createCardContent: {index  in  return "😀" })
+    MemoryGame<String>(numberOfPairsOfCards: 4, createCardContent: {_  in  "😀" })
     
     init(model: MemoryGame<String>) {
         self.model = model
