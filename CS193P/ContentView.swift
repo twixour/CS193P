@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var emojiCount: Int = 4
     var body: some View {
         VStack {
-            HStack {
+            LazyVGrid(columns: [GridItem(), GridItem(),GridItem()]) {
                 ForEach(emojis[0 ..< emojiCount], id:\.self) { emoji in
                     CardView(content: emoji)
                 }
