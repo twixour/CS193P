@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    var emojis = ["✈️", "🚗","🚜","🚁"]
     var body: some View {
         HStack {
-            CardView(content: "✈️")
-            CardView(content: "")
-            CardView(content: "")
-            CardView(content: "")
+            CardView(content: emojis[0])
+            CardView(content: emojis[1])
+            CardView(content: emojis[2])
+            CardView(content: emojis[3])
             
         }
         .padding(.horizontal)
