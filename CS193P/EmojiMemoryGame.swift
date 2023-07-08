@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+func makeCardContent(index: Int) -> String {
+    return "😀"
+}
+
 class EmojiMemoryGame {
-    private(set) var model: MemoryGame<String>        // private(set) -> others can see the model but can't change it
+    private var model: MemoryGame<String> = MemoryGame<String>(numberOfPairsOfCards: 4, createCardContent: makeCardContent)
     
     init(model: MemoryGame<String>) {
         self.model = model
